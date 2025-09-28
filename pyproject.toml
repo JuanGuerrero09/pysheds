@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysheds"
+version = "0.4"
+description = "🌎 Simple and fast watershed delineation in python."
+readme = "README.rst"
+requires-python = ">=3.6"
+authors = [
+  { name = "Matt Bartos", email = "mdbartos@umich.edu" },
+]
+license = { text = "GPL-3.0-or-later" }
+urls = { Homepage = "http://open-storm.org" }
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: GIS",
+  "Topic :: Scientific/Engineering :: Hydrology"
+]
+
+dependencies = [
+  "affine",
+  "geojson",
+  "ipykernel>=5.5.6",
+  "looseversion",
+  "matplotlib>=3.3.4",
+  "numba",
+  "numpy",
+  "pandas",
+  "pip>=21.3.1",
+  "pyproj",
+  "rasterio>=1",
+  "scikit-image",
+  "scipy",
+  "seaborn>=0.11.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+recipes = ["geopandas", "ipython", "matplotlib", "seaborn"]
+
+[tool.setuptools]
+packages = ["pysheds"]
+
+[tool.setuptools.package-data]
+"*" = ["*"]
